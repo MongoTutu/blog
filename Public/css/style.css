@@ -1,0 +1,47 @@
+*{margin:0;padding:0;}
+body{font-size:15px;color:#4b4b4b;font-family: Verdana,'Microsoft YaHei',Tahoma,'Simsun',sans-serif;cursor: default;background: #FFF;}
+ul,ol{list-style:none;}
+a{color: inherit;text-decoration:none;}
+img{border: none;}
+input{font-family: inherit;}
+.wraper{width: 602px;margin: auto;}
+@media screen and (max-width: 12000px) and (min-width: 602px){
+	.wraper{width: 602px;}
+}
+@media screen and (max-width: 602px){
+	.wraper{width: 100%;}
+}
+.bga{background: #77bc11;}
+.bgb{background: #e47001;}
+.bgc{background: #ee4f75;}
+.bgd{background: #7513e2;}
+.bge{background: #0289cd;}
+.bgf{background: #e770b3;}
+.bgg{background: #44ca81;}
+.bgh{background: #e88f63;}
+.bgi{background: #49bde4;}
+.bgj{background: #c78ae8;}
+.bgk{background: #e4b349;}
+.bgl{background: #7595de;}
+.bgm{background: #41bede;}
+
+.nav{position: fixed;width: 50px;background: #000;top: 0;bottom: 0;}
+.navList{margin-bottom: 1px;}
+.navList a{display: block;text-align: center;padding: 12px 0;background: #000;margin-left: 1px;}
+.navList a:hover{background: none;}
+.navList img{width: 22px;height: 22px;}
+
+.logo{padding-left: 80px;background: #F9F8F7;}
+.logo .logo_link{font-size: 32px;line-height: 50px;font-weight: 700;}
+.article{margin-top: 20px;}
+.page{margin-bottom: 20px;border-bottom: 1px solid #E0E2E4;padding-bottom: 20px;}
+.page_title{margin-bottom: 8px;}
+.page_title_link{font-size: 23px;font-weight: 100;}
+.page_title_link:hover{text-decoration: underline;}
+.page_description{font-size: 14px;line-height: 22px;color: #776;}
+.page_information{margin-top: 7px;font-size: 13px;line-height: 20px;height: 20px;}
+.page_information span{float: right;}
+.page_information a{margin-right: 12px;color: #233;}
+.page_information a:hover{text-decoration: underline;}
+
+.footer{text-align: center;padding: 30px 0;}
