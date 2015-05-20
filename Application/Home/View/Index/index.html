@@ -14,41 +14,25 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">
-            <h1><a class="logo_link" href="/">Tu</a></h1>
+        <div class="menubar">
+            <a class="menubar_link" href="javascript:void(0);"><img src="__PUBLIC__/img/menu.png" alt=""></a>
         </div>
-        <div class="nav">
-            <ul>
-                <li class="navList bga">
-                    <a href="/"><img src="__PUBLIC__/img/icon/light/24px/24_home.png" alt=""></a>
-                </li>
-                <li class="navList bgb">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_settings.png" alt=""></a>
-                </li>
-                <li class="navList bgc">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_poll.png" alt=""></a>
-                </li>
-                <li class="navList bgd">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_comments.png" alt=""></a>
-                </li>
-                <li class="navList bge">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_gallery.png" alt=""></a>
-                </li>
-                <li class="navList bgf">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_pie_graph.png" alt=""></a>
-                </li>
-                <li class="navList bgg">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_rss.png" alt=""></a>
-                </li>
-                <li class="navList bgh">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_html.png" alt=""></a>
-                </li>
-                <li class="navList bgi">
-                    <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/24px/24_googleplus.png" alt=""></a>
-                </li>
-            </ul>
+        <div class="menubar_Dv">
+            <div class="logo">
+                <a class="logo_link" href="{:U('/')}">Tu</a>
+            </div>
+            <div class="nav">
+                <ul class="nav_ul">
+                    <a href="{:U('/')}"><li class="nav_list">首页</li></a>
+                    <a href="{:U('/')}"><li class="nav_list">标签</li></a>
+                    <a href="{:U('/')}"><li class="nav_list">视频</li></a>
+                    <a href="{:U('/')}"><li class="nav_list">关于</li></a>
+                </ul>
+            </div>
         </div>
     </div>
+    <div class="header_p"></div>
+
     <div class="article wraper">
         <div class="pageList">
             <volist id="art" name="article">
@@ -72,4 +56,6 @@
         POWER BY KS_Tutu
     </div>
 </body>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/tu.js"></script>
 </html>

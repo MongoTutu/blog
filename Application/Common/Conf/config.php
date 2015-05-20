@@ -18,6 +18,7 @@ return array(
 
 	'URL_ROUTER_ON'   	=> true,
 	'URL_ROUTE_RULES'=>array(
-	    'p/:id'=> 'Home/Index/detail',
+	    'p/:id' => 'Home/Index/detail',
+		'tag/:tag' => 'Home/Index/get_tags'
 	),
 );

@@ -14,6 +14,9 @@ function multi_explode($delimiters,$string){
 function tr_tags($json){
 	$tags = json_decode($json,true);
 	foreach($tags as $k=>$v){
-		echo '<a href="#">'.$v.'</a>';
+		$str = '<a href="'.U('/tag/'.$v).'">';
+		$str .= $v;
+		$str .= '</a>';
+		echo $str;
 	}
 }
