@@ -8,6 +8,7 @@ class TagsModel extends Model{
         if(!$t) return false;
         $adds = array();
         $mt = M('tags');
+        $at = M('article_tags');
         foreach($t as $k=>$v){
             $query = array('tags'=>$v);
             $exists = $mt->where($query)->field('id')->find();
@@ -16,11 +17,13 @@ class TagsModel extends Model{
             }else{
                 $tid = M('tags')->data($query)->add();
             }
-            $adds[] = array(
+            $arr = array(
                 'tag_id' => $tid,
                 'article_id' => $aid,
                 'tag_name' => $v
             );
+            $ate = $at->where($arr)->find();
+            if(!$ate) $adds[] = $arr;
         }
         $res = M('article_tags')->addAll($adds);
         return $res;

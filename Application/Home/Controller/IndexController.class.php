@@ -4,7 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
 
     public function index(){
-        $d = M('article')->order('id desc')->limit(5)->select();
+        $d = D('Common/article')->get_article_list();
         $this->article = $d;
         $this->display();
     }

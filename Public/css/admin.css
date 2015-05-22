@@ -39,3 +39,31 @@ textarea{font-family: inherit;}
 .text_box{width: 100%;border: none;border-bottom: 1px solid #d0cfcf;outline: none;height: 36px;background: #FDFDFD;font-size: 17px;}
 .textarea_box{border: none;background: #EFEFEF;width: 98%;padding: 10px 1%;outline: none;font-size: 16px;height: 100px;}
 .submit_btn{border: none;width: 240px;height: 42px;color: #FFF;font-size: 17px;border-radius: 3px;outline: none;}
+
+.aLists{margin-left: 60px;padding: 20px;}
+.aList{background: #FFF;padding: 20px 2%;float: left;width: 28%;margin-right: 1%;margin-bottom: 15px;height: 140px;position: relative;box-shadow: 0 0 4px 1px #CCC;}
+.aList_h{margin-bottom: 6px;font-size: 16px;line-height: 24px;}
+.aList_m_item{line-height: 24px;}
+.aList_m_item img{float: left;height: 12px;width: 12px;margin-top: 7px;}
+.aList_m_item span{margin-left: 8px;}
+.aList_m_item a{margin-left: 8px;}
+.aList_f{position: absolute;right: 20px;bottom:15px;}
+
+
+.aList_f_edit{
+    display: inline-block;height: 24px;width: 24px;border-radius: 100%;
+    background-color: #44ca81;
+    background-image: url(../img/icon/icons-png/edit-white.png);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 6px 6px;
+    margin-right: 10px;
+}
+.aList_f_delete{
+    display: inline-block;height: 24px;width: 24px;border-radius: 100%;
+    background-color: #FF2f35;
+    background-image: url(../img/icon/icons-png/delete-white.png);
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 6px 6px;
+}
