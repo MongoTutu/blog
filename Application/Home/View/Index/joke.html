@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content ="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+<meta name="format-detection" content="telephone=no" />
+<title>Joke</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css">
+<link rel="stylesheet" href="__PUBLIC__/prettify/prettify.css">
+<link href="/favicon.ico" type="image/x-icon" rel=icon>
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+</head>
+<body>
+    <include file="header" />
+
+    <div class="article wraper">
+        <volist id="j" name="joke">
+        <div class="joke">
+            <div class="joke_title">{$j.title}</div>
+            <div class="joke_content">{$j.content}</div>
+            <div class="joke_time">{$j.time|date="Y.m.d",###}</div>
+        </div>
+        </volist>
+        <div class="page_think">
+            <if condition="$page['p'] gt 1"><a href="{:U('/joke/p/'.($page['p']-1))}"><</a></if>
+            <span>{$page.p} / {$page.pages}</span>
+            <if condition="$page['p'] lt $page['pages']"><a href="{:U('/joke/p/'.($page['p']+1))}">></a></if>
+        </div>
+    </div>
+
+    <div class="footer">
+        POWER BY KS_Tutu
+    </div>
+</body>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/tu.js"></script>
+</html>

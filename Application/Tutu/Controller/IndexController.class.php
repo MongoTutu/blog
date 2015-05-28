@@ -69,4 +69,44 @@ class IndexController extends Controller {
         }
     }
 
+    public function joke(){
+        $arts = D('Common/joke')->select();
+        $this->arts = $arts;
+        $this->display();
+        die;
+        include __ROOT__.'/Lib/phpQuery.php';
+        for($i=1;$i<40;$i++){
+            $dom = \phpQuery::newDocumentFile('http://www.pengfu.com/xiaohua_'.$i.'.html');
+            $com = pq($dom)->find('.contFont');
+            foreach($com as $v){
+                $lt['title'] = pq($v)->find('.tieTitle>a')->text();
+                $lt['content'] = pq($v)->find('.imgboxBtn')->html();
+                $lt['time'] = time();
+                D('Common/joke')->add_joke($lt);
+            }
+        }
+    }
+
+    public function edit_joke(){
+        $id = I('id');
+        $res = D('Common/joke')->where(array('id'=>$id))->find();
+        $this->art = $res;
+        $this->display();
+    }
+
+    public function alter_joke(){
+        $d = I();
+        $d['content'] = $_POST['content'];
+        $res = D('Common/joke')->where(array('id'=>$d['id']))->data($d)->save();
+        if($res){
+            $this->success('Success','joke');
+        }else{
+            $this->error('Error');
+        }
+    }
+
+    public function delete_joke(){
+        $id = I('id');
+    }
+
 }

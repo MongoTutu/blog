@@ -10,29 +10,11 @@
 <title>{$art.title}</title>
 <link rel="stylesheet" href="__PUBLIC__/css/style.css">
 <link rel="stylesheet" href="__PUBLIC__/prettify/prettify.css">
-<link href="favicon.ico" type="image/x-icon" rel=icon>
-<link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link href="/favicon.ico" type="image/x-icon" rel=icon>
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 </head>
 <body>
-    <div class="header">
-        <div class="menubar">
-            <a class="menubar_link" href="javascript:void(0);"><img src="__PUBLIC__/img/menu.png" alt=""></a>
-        </div>
-        <div class="menubar_Dv">
-            <div class="logo">
-                <a class="logo_link" href="{:U('/')}">Tu</a>
-            </div>
-            <div class="nav">
-                <ul class="nav_ul">
-                    <a href="{:U('/')}"><li class="nav_list">首页</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">标签</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">视频</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">关于</li></a>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="header_p"></div>
+    <include file="header" />
 
     <div class="article wraper">
         <div class="pageMain">

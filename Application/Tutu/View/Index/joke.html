@@ -1,0 +1,21 @@
+<include file="header" />
+
+    <div class="article">
+        <div class="aLists">
+            <volist id="art" name="arts">
+            <div class="aList" style="height:200px;">
+                <div class="aList_h"><a href="javascript:void(0);" target="_blank">{$art.title}</a></div>
+                <div class="aList_m" style="height:140px;background:#FFF;overflow:auto;">
+                    {$art.content}
+                </div>
+                <div class="aList_f">
+                    <a href="{:U('edit_joke',array('id'=>$art['id']))}" title="编辑" class="aList_f_edit"></a>
+                    <a href="{:U('delete_joke',array('id'=>$art['id']))}" title="删除" class="aList_f_delete"></a>
+                </div>
+            </div>
+            </volist>
+        </div>
+    </div>
+
+</body>
+</html>

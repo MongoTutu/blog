@@ -18,7 +18,11 @@ return array(
 
 	'URL_ROUTER_ON'   	=> true,
 	'URL_ROUTE_RULES'=>array(
+		'blog' => 'Home/Index/blog',
 	    'p/:id' => 'Home/Index/detail',
-		'tag/:tag' => 'Home/Index/get_tags'
+		'tag/:tag' => 'Home/Index/get_tags',
+		'joke' => 'Home/Index/joke',
+		'joke/p/:p' => 'Home/Index/joke',
+		'share' => 'Home/Index/share',
 	),
 );

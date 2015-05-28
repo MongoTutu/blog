@@ -9,47 +9,14 @@
 <meta name="format-detection" content="telephone=no" />
 <title>Blog</title>
 <link rel="stylesheet" href="__PUBLIC__/css/style.css">
-<link href="favicon.ico" type="image/x-icon" rel=icon>
-<link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+<link href="/favicon.ico" type="image/x-icon" rel=icon>
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 </head>
 <body>
-    <div class="header">
-        <div class="menubar">
-            <a class="menubar_link" href="javascript:void(0);"><img src="__PUBLIC__/img/menu.png" alt=""></a>
-        </div>
-        <div class="menubar_Dv">
-            <div class="logo">
-                <a class="logo_link" href="{:U('/')}">Tu</a>
-            </div>
-            <div class="nav">
-                <ul class="nav_ul">
-                    <a href="{:U('/')}"><li class="nav_list">首页</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">标签</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">视频</li></a>
-                    <a href="{:U('/')}"><li class="nav_list">关于</li></a>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="header_p"></div>
+    <include file="header" />
 
     <div class="article wraper">
-        <div class="pageList">
-            <volist id="art" name="article">
-            <div class="page">
-                <div class="page_title">
-                    <h2><a href="{:U('/p/'.$art['id'])}" class="page_title_link">{$art.title}</a></h2>
-                </div>
-                <div class="page_description">
-                    {$art.description}
-                </div>
-                <div class="page_information">
-                    {$art.tags|tr_tags}
-                    <span>{$art.time|date='Y.m.d',###}</span>
-                </div>
-            </div>
-            </volist>
-        </div>
+        <h1>Hello World</h1>
     </div>
 
     <div class="footer">
