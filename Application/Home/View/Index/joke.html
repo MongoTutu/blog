@@ -12,28 +12,26 @@
 <link rel="stylesheet" href="__PUBLIC__/prettify/prettify.css">
 <link href="/favicon.ico" type="image/x-icon" rel=icon>
 <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
-</head>
-<body>
-    <include file="header" />
+<include file="header" />
 
-    <div class="article wraper">
-        <volist id="j" name="joke">
-        <div class="joke">
-            <div class="joke_title">{$j.title}</div>
-            <div class="joke_content">{$j.content}</div>
-            <div class="joke_time">{$j.time|date="Y.m.d",###}</div>
-        </div>
-        </volist>
-        <div class="page_think">
-            <if condition="$page['p'] gt 1"><a href="{:U('/joke/p/'.($page['p']-1))}"><</a></if>
-            <span>{$page.p} / {$page.pages}</span>
-            <if condition="$page['p'] lt $page['pages']"><a href="{:U('/joke/p/'.($page['p']+1))}">></a></if>
-        </div>
-    </div>
+	<div class="article wraper">
+		<volist id="j" name="joke">
+			<div class="joke">
+				<div class="joke_title">{$j.title}</div>
+				<div class="joke_content">{$j.content}</div>
+				<div class="joke_time">{$j.time|date="Y.m.d",###}</div>
+			</div>
+		</volist>
+		<div class="page_think">
+			<if condition="$page['p'] gt 1"><a href="{:U('/joke/p/'.($page['p']-1))}"><</a></if>
+			<span>{$page.p} / {$page.pages}</span>
+			<if condition="$page['p'] lt $page['pages']"><a href="{:U('/joke/p/'.($page['p']+1))}">></a></if>
+		</div>
+	</div>
 
-    <div class="footer">
-        POWER BY KS_Tutu
-    </div>
+	<div class="footer">
+		POWER BY KS_Tutu
+	</div>
 </body>
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/tu.js"></script>

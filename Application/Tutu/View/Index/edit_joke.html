@@ -1,23 +1,23 @@
 <include file="header" />
 
-    <div class="article">
-        <div class="main">
-            <form action="{:U('alter_joke')}" method="post">
-            <input type="hidden" name="id" value="{$art.id}">
-            <div class="addBlog">
-                <div class="textDv">
-                    <input type="text" class="text_box" name="title" placeholder="标题" value="{$art.title}">
-                </div>
-                <div class="textDv">
-                    <textarea id="editor" name="content">{$art.content}</textarea>
-                </div>
-                <div class="textDv">
-                    <input type="submit" class="submit_btn bgg" value="提 交">
-                </div>
-            </div>
-            </form>
-        </div>
-    </div>
+<div class="article">
+	<div class="main">
+		<form action="{:U('alter_joke')}" method="post">
+			<input type="hidden" name="id" value="{$art.id}">
+			<div class="addBlog">
+				<div class="textDv">
+					<input type="text" class="text_box" name="title" placeholder="标题" value="{$art.title}">
+				</div>
+				<div class="textDv">
+					<textarea id="editor" name="content">{$art.content}</textarea>
+				</div>
+				<div class="textDv">
+					<input type="submit" class="submit_btn bgg" value="提 交">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
 </body>
 <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
@@ -26,15 +26,15 @@
 <script type="text/javascript" src="__PUBLIC__/simditor/scripts/uploader.js"></script>
 <script type="text/javascript" src="__PUBLIC__/simditor/scripts/simditor.js"></script>
 <script type="text/javascript">
-$(function() {
-    var editor, toolbar;
-    toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', '|', 'source'];
-    return editor = new Simditor({
-        textarea: $('#editor'),
-        placeholder: '文章正文...',
-        toolbar: toolbar,
-        pasteImage: true,
-    });
-});
+	$(function() {
+		var editor, toolbar;
+		toolbar = ['title', 'bold', 'italic', 'underline', 'strikethrough', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'image', 'hr', '|', 'indent', 'outdent', '|', 'source'];
+		return editor = new Simditor({
+			textarea: $('#editor'),
+			placeholder: '文章正文...',
+			toolbar: toolbar,
+			pasteImage: true,
+		});
+	});
 </script>
 </html>

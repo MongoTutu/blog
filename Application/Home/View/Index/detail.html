@@ -12,26 +12,24 @@
 <link rel="stylesheet" href="__PUBLIC__/prettify/prettify.css">
 <link href="/favicon.ico" type="image/x-icon" rel=icon>
 <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
-</head>
-<body>
-    <include file="header" />
+<include file="header" />
 
-    <div class="article wraper">
-        <div class="pageMain">
-            <div class="pageMain_title"><h1>{$art.title}</h1></div>
-            <div class="pageMain_information">
-                {$art.tags|tr_tags}
-                <span>{$art.time|date='Y.m.d',###}</span>
-            </div>
-            <div class="pageMain_content">
-                {$art.content}
-            </div>
-        </div>
-    </div>
+	<div class="article wraper">
+		<div class="pageMain">
+			<div class="pageMain_title"><h1>{$art.title}</h1></div>
+			<div class="pageMain_information">
+				{$art.tags|tr_tags}
+				<span>{$art.time|date='Y.m.d',###}</span>
+			</div>
+			<div class="pageMain_content">
+				{$art.content}
+			</div>
+		</div>
+	</div>
 
-    <div class="footer">
-        POWER BY KS_Tutu
-    </div>
+	<div class="footer">
+	POWER BY KS_Tutu
+	</div>
 </body>
 <script src="__PUBLIC__/js/jquery.min.js"></script>
 <script src="__PUBLIC__/js/tu.js"></script>

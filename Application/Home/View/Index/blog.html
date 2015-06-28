@@ -11,28 +11,27 @@
 <link rel="stylesheet" href="__PUBLIC__/css/style.css">
 <link href="/favicon.ico" type="image/x-icon" rel=icon>
 <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
-</head>
-<body>
-    <include file="header" />
 
-    <div class="article wraper">
-        <div class="pageList">
-            <volist id="art" name="article">
-            <div class="page">
-                <div class="page_title">
-                    <h2><a href="{:U('/p/'.$art['id'])}" class="page_title_link">{$art.title}</a></h2>
-                </div>
-                <div class="page_description">
-                    {$art.description}
-                </div>
-                <div class="page_information">
-                    {$art.tags|tr_tags}
-                    <span>{$art.time|date='Y.m.d',###}</span>
-                </div>
-            </div>
-            </volist>
-        </div>
-    </div>
+	<include file="header" />
+
+	<div class="article wraper">
+		<div class="pageList">
+			<volist id="art" name="article">
+				<div class="page">
+					<div class="page_title">
+						<h2><a href="{:U('/p/'.$art['_id'])}" class="page_title_link">{$art.title}</a></h2>
+					</div>
+					<div class="page_description">
+						{$art.description}
+					</div>
+					<div class="page_information">
+						{$art.tags|tr_tags}
+						<span>{$art.time|date='Y.m.d',###}</span>
+					</div>
+				</div>
+			</volist>
+		</div>
+	</div>
 
     <div class="footer">
         POWER BY KS_Tutu

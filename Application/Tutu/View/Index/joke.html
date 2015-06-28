@@ -1,21 +1,39 @@
 <include file="header" />
 
-    <div class="article">
-        <div class="aLists">
-            <volist id="art" name="arts">
-            <div class="aList" style="height:200px;">
-                <div class="aList_h"><a href="javascript:void(0);" target="_blank">{$art.title}</a></div>
-                <div class="aList_m" style="height:140px;background:#FFF;overflow:auto;">
-                    {$art.content}
-                </div>
-                <div class="aList_f">
-                    <a href="{:U('edit_joke',array('id'=>$art['id']))}" title="编辑" class="aList_f_edit"></a>
-                    <a href="{:U('delete_joke',array('id'=>$art['id']))}" title="删除" class="aList_f_delete"></a>
-                </div>
-            </div>
-            </volist>
-        </div>
-    </div>
+<div class="article">
+	<div class="main">
+		<div class="js-masonry" id="container">
+			<volist id="art" name="arts">
+			<div class="msry-item">
+				<section class="am-panel am-panel-default">
+					<header class="am-panel-hd">
+					<h3 class="am-panel-title">{$art.title}</h3>
+					</header>
+					<div class="am-panel-bd am-text-sm">
+						{$art.content}
+					</div>
+					<div class="am-panel-footer">
+						<a href="{:U('edit_joke',array('id'=>$art['_id']))}" class="am-badge am-badge-success am-radius">编辑</a>
+						<a href="{:U('delete_joke',array('id'=>$art['_id']))}" class="am-badge am-badge-danger am-radius">删除</a>
+					</div>
+				</section>
+			</div>
+			</volist>
+		</div>
+	</div>
+</div>
 
 </body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.4.0/js/amazeui.min.js"></script>
+<script src="__PUBLIC__/js/masonry.pkgd.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+$(function(){
+	var container = $('#container');
+	new Masonry(container,{
+		itemSelector : '.msry-item',
+		isAnimated: true,
+	});	
+})
+</script>
 </html>

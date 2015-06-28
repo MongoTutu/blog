@@ -11,10 +11,10 @@ function multi_explode($delimiters,$string){
 	return $arr;
 }
 
-function tr_tags($json){
-	$tags = json_decode($json,true);
+function tr_tags($tags){
+	// $tags = json_decode($json,true);
 	foreach($tags as $k=>$v){
-		$str = '<a href="'.U('/tag/'.$v).'">';
+		$str = '<a class="am-badge am-badge-secondary am-radius" href="'.U('/tag/'.$v).'">';
 		$str .= $v;
 		$str .= '</a>';
 		echo $str;

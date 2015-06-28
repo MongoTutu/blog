@@ -3,39 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Admin</title>
+<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.4.0/css/amazeui.min.css">
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css">
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/simditor/styles/simditor.css" />
 </head>
 <body>
 
-<div class="nav">
-    <ul>
-        <li class="navList bga">
-            <a href="{:U('index')}"><img src="__PUBLIC__/img/icon/light/48px/48_home.png" alt=""></a>
-        </li>
-        <li class="navList bgb">
-            <a href="{:U('article_list')}"><img src="__PUBLIC__/img/icon/light/48px/48_settings.png" alt=""></a>
-        </li>
-        <li class="navList bgc">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_poll.png" alt=""></a>
-        </li>
-        <li class="navList bgd">
-            <a href="{:U('joke')}"><img src="__PUBLIC__/img/icon/light/48px/48_comments.png" alt=""></a>
-        </li>
-        <li class="navList bge">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_gallery.png" alt=""></a>
-        </li>
-        <li class="navList bgf">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_pie_graph.png" alt=""></a>
-        </li>
-        <li class="navList bgg">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_rss.png" alt=""></a>
-        </li>
-        <li class="navList bgh">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_html.png" alt=""></a>
-        </li>
-        <li class="navList bgi">
-            <a href="javascript:void(0);"><img src="__PUBLIC__/img/icon/light/48px/48_googleplus.png" alt=""></a>
-        </li>
-    </ul>
-</div>
+<header class="am-topbar am-topbar-inverse">
+	<div class="wraper">
+	<h1 class="am-topbar-brand">
+		<a href="{:U('/tutu')}">
+			TuBlog
+		</a>
+	</h1>
+	<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+		<ul class="am-nav am-nav-pills am-topbar-nav">
+			<li><a href="{:U('/tutu')}">首页</a></li>
+
+			<li class="am-dropdown" data-am-dropdown>
+				<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">博客 <span class="am-icon-caret-down"></span></a>
+				<ul class="am-dropdown-content">
+					<li><a href="{:U('blog_list')}">博客列表</a></li>
+					<li><a href="{:U('blog')}">添加博客</a></li>
+					<li><a href="{:U('n_blog')}">待审核博客</a></li>
+				</ul>
+			</li>
+
+			<li><a href="{:U('joke')}">笑话</a></li>
+
+		</ul>
+
+		<div class="am-topbar-right">
+			<div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
+				<button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>Zhangtutu <span class="am-icon-caret-down"></span></button>
+				<ul class="am-dropdown-content">
+					<li><a href="#">个人设置</a></li>
+					<li><a href="#">退出登录</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+</header>

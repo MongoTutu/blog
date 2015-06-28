@@ -1,7 +1,7 @@
 <?php
 namespace Common\Model;
-use Think\Model;
-class TagsModel extends Model{
+use Think\Model\MongoModel;
+class TagsModel extends MongoModel{
 
     public function set_tags($tags,$aid){
         $t = multi_explode(array(',','，'),$tags);
