@@ -1,42 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content ="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
-<meta name="format-detection" content="telephone=no" />
-<title>Blog</title>
-<link rel="stylesheet" href="__PUBLIC__/css/style.css">
-<link href="/favicon.ico" type="image/x-icon" rel=icon>
-<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<include file="header" />
 
-	<include file="header" />
-
-	<div class="article wraper">
-		<div class="pageList">
+	<div class="article">
+		<div class="arts wraper">
 			<volist id="art" name="article">
-				<div class="page">
-					<div class="page_title">
-						<h2><a href="{:U('/p/'.$art['_id'])}" class="page_title_link">{$art.title}</a></h2>
-					</div>
-					<div class="page_description">
-						{$art.description}
-					</div>
-					<div class="page_information">
-						{$art.tags|tr_tags}
-						<span>{$art.time|date='Y.m.d',###}</span>
-					</div>
+			<div class="art">
+				<div class="p_title">
+					<h2><a href="{:U('/p/'.$art['_id'])}">{$art.title}</a></h2>
 				</div>
+
+				<div class="p_date">
+					<i class="fa fa-calendar"></i> {$art.time|date='Y.m.d',###}
+					<span>阅读 2135</span>
+				</div>
+
+				<div class="p_description">
+					<p>{$art.description}</p>
+				</div>
+
+				<div class="p_information">
+					<a href="javascript:;"><i class="fa fa-bookmark-o"></i> Code</a>
+				</div>
+			</div>
 			</volist>
 		</div>
 	</div>
 
-    <div class="footer">
-        POWER BY KS_Tutu
-    </div>
+	<div class="footer">
+		POWER BY KS_Tutu
+	</div>
+
 </body>
-<script src="__PUBLIC__/js/jquery.min.js"></script>
-<script src="__PUBLIC__/js/tu.js"></script>
 </html>

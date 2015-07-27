@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content ="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
-<meta name="format-detection" content="telephone=no" />
-<title>{$art.title}</title>
-<link rel="stylesheet" href="__PUBLIC__/css/style.css">
-<link rel="stylesheet" href="__PUBLIC__/prettify/prettify.css">
-<link href="/favicon.ico" type="image/x-icon" rel=icon>
-<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
 <include file="header" />
 
 	<div class="article wraper">
@@ -19,7 +5,10 @@
 			<div class="pageMain_title"><h1>{$art.title}</h1></div>
 			<div class="pageMain_information">
 				{$art.tags|tr_tags}
-				<span>{$art.time|date='Y.m.d',###}</span>
+				<p>
+					<i class="fa fa-calendar"></i> {$art.time|date='Y.m.d',###}
+					<span>阅读 2135</span>					
+				</p>
 			</div>
 			<div class="pageMain_content">
 				{$art.content}
@@ -28,14 +17,7 @@
 	</div>
 
 	<div class="footer">
-	POWER BY KS_Tutu
+		POWER BY KS_Tutu
 	</div>
 </body>
-<script src="__PUBLIC__/js/jquery.min.js"></script>
-<script src="__PUBLIC__/js/tu.js"></script>
-<script src="__PUBLIC__/prettify/prettify.js"></script>
-<script>
-$("pre").addClass("prettyprint linenums");
-prettyPrint();
-</script>
 </html>
